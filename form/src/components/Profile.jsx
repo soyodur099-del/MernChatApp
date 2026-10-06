@@ -11,7 +11,7 @@ function Profile() {
 
   const handleLogout = ()=>{
 
-    axios.get('http://localhost:3000/api/auth/Logout', {withCredentials: true}).then((data)=>{
+    axios.get('https://mern-chat-backend-xj0t.onrender.com/api/auth/Logout', {withCredentials: true}).then((data)=>{
       if(data.status===200){
         alert(data.data.message)
         navigate('/Login')
@@ -23,7 +23,7 @@ function Profile() {
 
   
 
-    axios.get('http://localhost:3000/api/auth/Home', {withCredentials: true}).then((data)=>{
+    axios.get('https://mern-chat-backend-xj0t.onrender.com/api/auth/Home', {withCredentials: true}).then((data)=>{
       console.log(data)
       setUser(data.data)
     }).catch((err)=>{
