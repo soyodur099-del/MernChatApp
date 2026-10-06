@@ -13,7 +13,7 @@ function Login() {
 const handleSubmit = (e)=>{
   e.preventDefault()
   console.log(username, password)
- axios.post('http://localhost:3000/api/auth/Login',  {username, password}, {
+ axios.post('https://mern-chat-backend-xj0t.onrender.com/api/auth/Login',  {username, password}, {
    withCredentials: true
  })
     .then((msg)=>{
