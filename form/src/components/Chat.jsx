@@ -28,7 +28,7 @@ const [userId, setUserId] =useState('')
 
 
     
-    const res = await axios.post('http://localhost:3000/api/auth/fetchMsg', {receiverId}, {withCredentials:true})
+    const res = await axios.post('https://mern-chat-backend-xj0t.onrender.com/api/auth/fetchMsg', {receiverId}, {withCredentials:true})
 console.log(res)
     if(res.status===200){
       console.log(res)
@@ -56,14 +56,14 @@ console.log(res)
       try {
         // Fetch current user details
         const homeRes = await axios.get(
-          "http://localhost:3000/api/auth/Home",
+          "https://mern-chat-backend-xj0t.onrender.com/api/auth/Home",
           { withCredentials: true }
         );
         await setMyId(homeRes.data._id)
 
         // Fetch receiver details
         const userRes = await axios.post(
-          "http://localhost:3000/api/auth/userData",
+          "https://mern-chat-backend-xj0t.onrender.com/api/auth/userData",
           { receiverId },
           { withCredentials: true }
         );
@@ -130,7 +130,7 @@ useEffect(() => {
   
   
 }, []);
-  const socket = io("http://localhost:3000", {
+  const socket = io("https://mern-chat-backend-xj0t.onrender.com", {
     query: { userId: myId }
   });
 
@@ -173,7 +173,7 @@ useEffect(() => {
       console.log("Message:", message);
 
      const res= await axios.post(
-        "http://localhost:3000/api/auth/send",
+        "https://mern-chat-backend-xj0t.onrender.com/api/auth/send",
         { receiverId, message },
         { withCredentials: true }
       );
