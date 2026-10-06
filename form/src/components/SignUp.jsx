@@ -13,7 +13,7 @@ function SignUp() {
 const handleSubmit = (e)=>{
   e.preventDefault()
   console.log(username, email, password)
- axios.post('http://localhost:3000/api/auth/SignUp',  {username, email, password})
+ axios.post('https://mern-chat-backend-xj0t.onrender.com/api/auth/SignUp',  {username, email, password})
     .then((msg)=>{
       if(msg.data.message==='successfull'){
         navigate('/Login')
