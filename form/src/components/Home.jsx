@@ -17,7 +17,7 @@ function Home() {
 
   const fetchUser = async ()=>{
 
-    await axios.get('http://localhost:3000/api/auth/getUser', {withCredentials: true}).then((data)=>{
+    await axios.get('https://mern-chat-backend-xj0t.onrender.com/api/auth/getUser', {withCredentials: true}).then((data)=>{
       if(data.status===200){
         console.log(data)
         setUser(data.data.filteredUser)
