@@ -16,7 +16,7 @@ const httpServer = http.createServer(app);
 
 const io = new Server(httpServer, {
   cors: {
-    origin: "http://localhost:5173",
+    origin: "https://soyodur-mern-chat.onrender.com",
     credentials: true
   }
 });
@@ -51,7 +51,7 @@ const URI = 'mongodb+srv://soyodur099_db_user:xhq6ZKWTh2sblqdN@cluster0.4jilrop.
 
 
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: 'https://soyodur-mern-chat.onrender.com',
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS']
 }
